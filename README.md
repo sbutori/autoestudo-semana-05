@@ -1,7 +1,7 @@
 # autoestudo-semana-05
 
 
-## 1. Tente valores diferentes do argumento num_examples na função load_data_nmt. Como isso afeta os tamanhos do vocabulário do idioma de origem e do idioma de destino?
+## 1. Tente valores diferentes do argumento num_examples na função load_data_nmt. Como isso afeta os tamanhos do vocabulário do idioma de origem e do idioma de destino? Baseie sua resposta em resultados de execução no Notebook.
 
 ### Resultados de execução do notebook com diferentes num_examples
 ```
@@ -40,7 +40,12 @@ valid lengths for Y: tf.Tensor([5 4], shape=(2,), dtype=int32)
   
 O parâmetro num_examples determina a quantidade de exemplos carregados para a modelagem. Conforme o valor de num_examples aumenta (1, 300, 1200), observa-se um aumento na diversidade e complexidade das sequências em X e Y. Por exemplo, com num_examples=1 o comprimento válido de Y é 3. Já com num_examples=1200, o comprimento válido de Y chega a 5, indicando que mais dados e variações de comprimento nas sequências estão sendo incluídos. A mesma situação é observada com X, sendo que com num_examples=1 temos um comprimento válido de 3 e com 300 (ou mais) exemplos o comprimento válido passa a ser 4.
 
-## 2. O texto em alguns idiomas, como chinês e japonês, não tem indicadores de limite de palavras (por exemplo, espaço). A tokenização em nível de palavra ainda é uma boa ideia para esses casos? Por que ou por que não?
+## 2. O texto em alguns idiomas, como chinês e japonês, não tem indicadores de limite de palavras (por exemplo, espaço). A tokenização em nível de palavra ainda é uma boa ideia para esses casos? Por que ou por que não? Apresente justificativas com referências (e.g., a partes do texto da seção ou referências externas)
+
+### Referências 
+
+- Setting up Japanese NLP with spaCy and MeCab, disponível em: https://www.dampfkraft.com/nlp/japanese-spacy-and-mecab.html. Acesso em 8 de setembro de 2024.
+- ZHANG, A. et al. Dive into Deep Learning. Seção 9.5.2., disponível em: https://pt.d2l.ai/chapter_recurrent-modern/machine-translation-and-dataset.html. Acesso em 8 de setembro de 2024.
 
 ### Resposta
 
